@@ -8,6 +8,8 @@ const AdminHeader = () => {
     const [languageDropdown, setlanguageDropdown] = useState<boolean>(false);
     const [openNav, setOpenNav] = useState<boolean>(false);
 
+    
+
     return (
         <>
             <div className="w-full h-full flex items-center justify-end phone:justify-between px-5">
@@ -23,8 +25,8 @@ const AdminHeader = () => {
                         onClick={() => setlanguageDropdown(!languageDropdown)}
                     >
                         <div className="w-10 h-10 bg-amber-200 rounded-full"></div>
-                        <div className="w-40 phone:w-max h-10">
-                            <p className="font-medium phone:text-sm">
+                        <div className="w-40 phone:w-max h-10 flex flex-col justify-center">
+                            <p className="font-medium text-sm">
                                 Rapheal Ukachukwu
                             </p>
                             <p className="text-xs flex items-center gap-1 text-green-500">
