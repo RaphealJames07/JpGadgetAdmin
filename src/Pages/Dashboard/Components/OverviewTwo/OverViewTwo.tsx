@@ -7,7 +7,7 @@ const OverViewTwo = () => {
     return (
         <>
             <div className="w-full h-max flex phone:flex-col gap-5 mt-4">
-                <div className="w-1/2 phone:w-full h-[60vh] border flex flex-col border-gray-200 bg-white rounded overflow-auto">
+                <div className="w-1/2 phone:w-full h-[60vh] phone:h-[55vh] border flex flex-col border-gray-200 bg-white rounded overflow-auto">
                     <div className="w-full h-10 flex justify-between items-center px-4 border-b border-b-gray-200">
                         <p className="text-base font-semibold">Recent Orders</p>
                         <div className="w-max text-xs bg-green-100 rounded-sm p-1 cursor-pointer">
