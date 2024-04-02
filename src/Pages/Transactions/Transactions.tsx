@@ -1,9 +1,17 @@
-
+import SummaryBoxes from "./Components/SummaryBoxes";
+import TransactionGraph from "./Components/TransactionGraph";
 
 const Transactions = () => {
-  return (
-    <div>Transactions</div>
-  )
-}
+    return (
+        <>
+            <div className="w-full h-max min-h-full  flex flex-col gap-3 text-gray-600 bg-[#f2f6f9] px-3 pt-1 pb-5">
+                <p className="text-lg font-semibold">Transactions</p>
+                <SummaryBoxes />
+                <TransactionGraph />
+                
+            </div>
+        </>
+    );
+};
 
-export default Transactions
+export default Transactions;
