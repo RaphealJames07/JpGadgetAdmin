@@ -26,7 +26,7 @@ const AdminNav = () => {
                                     : "transition-all bg-[#118686] text-white"
                             }
                         >
-                            <div className="w-full h-12 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400">
+                            <div className="w-full h-10 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400">
                                 <MdDashboard className="w-5 h-5" />
                                 <p className="text-sm font-medium">Dashboard</p>
                             </div>
@@ -39,7 +39,7 @@ const AdminNav = () => {
                                     : "transition-all bg-[#118686] text-white"
                             }
                         >
-                            <div className="w-full h-12 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
+                            <div className="w-full h-10 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
                                 <MdDashboard className="w-5 h-5" />
                                 <p className="text-sm font-medium">Orders</p>
                             </div>
@@ -52,7 +52,7 @@ const AdminNav = () => {
                                     : "transition-all bg-[#118686] text-white"
                             }
                         >
-                            <div className="w-full h-12 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
+                            <div className="w-full h-10 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
                                 <MdDashboard className="w-5 h-5" />
                                 <p className="text-sm font-medium">
                                     Transactions
@@ -67,7 +67,7 @@ const AdminNav = () => {
                                     : "transition-all bg-[#118686] text-white"
                             }
                         >
-                            <div className="w-full h-12 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
+                            <div className="w-full h-10 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
                                 <MdDashboard className="w-5 h-5" />
                                 <p className="text-sm font-medium">Products</p>
                             </div>
@@ -80,7 +80,7 @@ const AdminNav = () => {
                                     : "transition-all bg-[#118686] text-white"
                             }
                         >
-                            <div className="w-full h-12 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
+                            <div className="w-full h-10 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
                                 <MdDashboard className="w-5 h-5" />
                                 <p className="text-sm font-medium">Users</p>
                             </div>
@@ -93,7 +93,7 @@ const AdminNav = () => {
                                     : "transition-all bg-[#118686] text-white"
                             }
                         >
-                            <div className="w-full h-12 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
+                            <div className="w-full h-10 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
                                 <MdDashboard className="w-5 h-5" />
                                 <p className="text-sm font-medium">Reports</p>
                             </div>
@@ -106,7 +106,7 @@ const AdminNav = () => {
                                     : "transition-all bg-[#118686] text-white"
                             }
                         >
-                            <div className="w-full h-12 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
+                            <div className="w-full h-10 px-4 flex items-center gap-4 cursor-pointer transition-all duration-400 ">
                                 <MdDashboard className="w-5 h-5" />
                                 <p className="text-sm font-medium">Settings</p>
                             </div>

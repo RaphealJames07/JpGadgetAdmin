@@ -8,6 +8,8 @@ import Users from "./Pages/Users.tsx/Users";
 import Reports from "./Pages/Reports/Reports";
 import Transactions from "./Pages/Transactions/Transactions";
 import Settings from "./Pages/Settings/Settings";
+import OrderDetails from "./Pages/Orders/Components/OrderDetails";
+import OrderContent from "./Pages/Orders/Components/OrderContent";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -26,6 +28,16 @@ const App = () => {
                 {
                     path: "orders",
                     element: <Orders />,
+                    children: [
+                        {
+                            path: "",
+                            element: <OrderContent />,
+                        },
+                        {
+                            path: ":id",
+                            element: <OrderDetails />,
+                        },
+                    ],
                 },
                 {
                     path: "products",
