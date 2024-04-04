@@ -1,5 +1,6 @@
 import SummaryBoxes from "./Components/SummaryBoxes";
 import TransactionGraph from "./Components/TransactionGraph";
+import TransactionsList from "./Components/TransactionsList";
 
 const Transactions = () => {
     return (
@@ -8,7 +9,7 @@ const Transactions = () => {
                 <p className="text-lg font-semibold">Transactions</p>
                 <SummaryBoxes />
                 <TransactionGraph />
-                
+                <TransactionsList/>
             </div>
         </>
     );
