@@ -10,6 +10,10 @@ import Transactions from "./Pages/Transactions/Transactions";
 import Settings from "./Pages/Settings/Settings";
 import OrderDetails from "./Pages/Orders/Components/OrderDetails";
 import OrderContent from "./Pages/Orders/Components/OrderContent";
+import ViewProduct from "./Pages/Products/Components/ViewProduct";
+import EditProduct from "./Pages/Products/Components/EditProduct";
+import CreateProduct from "./Pages/Products/Components/CreateProduct";
+import ProductContent from "./Pages/Products/Components/ProductContent";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -42,6 +46,24 @@ const App = () => {
                 {
                     path: "products",
                     element: <Products />,
+                    children: [
+                        {
+                            path: "",
+                            element: <ProductContent />,
+                        },
+                        {
+                            path: "create",
+                            element: <CreateProduct />,
+                        },
+                        {
+                            path: "view/:id",
+                            element: <ViewProduct />,
+                        },
+                        {
+                            path: "edit/:id",
+                            element: <EditProduct />,
+                        },
+                    ],
                 },
                 {
                     path: "users",
