@@ -1,6 +1,7 @@
-import { Pagination } from "antd";
+import {Pagination} from "antd";
 import ProductList from "./ProductList";
-import { FaPlus } from "react-icons/fa";
+import {FaPlus} from "react-icons/fa";
+import {NavLink} from "react-router-dom";
 
 const ProductContent = () => {
     return (
@@ -9,9 +10,11 @@ const ProductContent = () => {
             <div className="w-full h-max flex flex-col gap-2 bg-white px-2 py-2 rounded">
                 <div className="w-full h-max flex justify-between ">
                     <div className="w-max h-max">
-                        <button className="w-max h-max flex gap-2 items-center justify-center px-3 text-xs py-2 font-medium bg-[#13c56b] text-white rounded">
-                            <FaPlus /> Add Product
-                        </button>
+                        <NavLink to={"/admin/products/create"}>
+                            <button className="w-max h-max flex gap-2 items-center justify-center px-3 text-xs py-2 font-medium bg-[#13c56b] text-white rounded">
+                                <FaPlus /> Add Product
+                            </button>
+                        </NavLink>
                     </div>
                     <div className="">
                         <input

@@ -14,6 +14,7 @@ import ViewProduct from "./Pages/Products/Components/ViewProduct";
 import EditProduct from "./Pages/Products/Components/EditProduct";
 import CreateProduct from "./Pages/Products/Components/CreateProduct";
 import ProductContent from "./Pages/Products/Components/ProductContent";
+import Text from "./Text";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -80,6 +81,10 @@ const App = () => {
                 {
                     path: "settings",
                     element: <Settings />,
+                },
+                {
+                    path: "test",
+                    element: <Text />,
                 },
             ],
         },

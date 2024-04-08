@@ -1,0 +1,7 @@
+/* ckeditor.css */
+/* Example styles for CKEditor content */
+
+.ck-content ol,
+.ck-content ul {
+  margin-left: 20px;
+}
