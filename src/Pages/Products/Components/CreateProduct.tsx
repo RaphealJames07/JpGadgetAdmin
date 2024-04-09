@@ -1,9 +1,6 @@
-import {ColorFactory} from "antd/es/color-picker/color";
 import React, {useState} from "react";
 
 const CreateProduct = () => {
-    const [fileInput, setFileInput] = useState<HTMLInputElement | null>(null);
-    const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
     const [selectedFileNames, setSelectedFileNames] = useState<string>(
         "Click to select images"
     );
@@ -23,10 +20,11 @@ const CreateProduct = () => {
         const files = e.target.files;
         if (files) {
             const fileArray = Array.from(files);
-            setSelectedFiles([...selectedFiles, ...fileArray]);
+            const fileNames = fileArray.map((file) => file.name).join(", ");
+            setSelectedFileNames(fileNames);
             setImageData({
                 ...imageData,
-                [color]: [...imageData[color], ...fileArray], // Add images to the corresponding color
+                [color]: [...imageData[color], ...fileArray],
             });
         }
     };
@@ -46,7 +44,7 @@ const CreateProduct = () => {
             setColorValue("");
             setImageData({...imageData, [colorValue]: []});
             if (variant === "single" || colors.length >= 1) {
-                setDisableColorInput(true); // You need to define this state
+                setDisableColorInput(true);
             }
         } else {
             return;
@@ -85,7 +83,7 @@ const CreateProduct = () => {
                                 type="file"
                                 accept="image/jpeg, image/png, image/webp, image/svg+xml"
                                 className="hidden"
-                                onChange={(e) => handleFileChange(e, color)} // Pass the color to handleFileChange
+                                onChange={(e) => handleFileChange(e, color)}
                                 multiple
                                 id={`fileInput_${color}`}
                             />
@@ -218,11 +216,13 @@ const CreateProduct = () => {
                                                             }
                                                         }}
                                                     >
-                                                        <div className="w-max px-2 flex items-center flex-col justify-center h-full">
+                                                        <div className="w-max px-2 flex items-center text-sm flex-col justify-center h-full">
                                                             {selectedFileNames}
                                                             <p>
                                                                 {
-                                                                    selectedFiles.length
+                                                                    imageData[
+                                                                        color
+                                                                    ].length
                                                                 }{" "}
                                                                 Image(s)
                                                                 selected
@@ -256,6 +256,9 @@ const CreateProduct = () => {
                                                                     ...imageData,
                                                                     [color]: [],
                                                                 });
+                                                                setSelectedFileNames(
+                                                                    "Click to select images"
+                                                                );
                                                             }}
                                                         >
                                                             Clear images
