@@ -43,7 +43,7 @@ const CreateProduct = () => {
             setColors([...colors, colorValue]);
             setColorValue("");
             setImageData({...imageData, [colorValue]: []});
-            if (variant === "single" || colors.length >= 1) {
+            if (variant === "single") {
                 setDisableColorInput(true);
             }
         } else {
@@ -115,7 +115,9 @@ const CreateProduct = () => {
                                             ...imageData,
                                             [color]: [],
                                         });
-                                        setSelectedFileNames("Click to select images")
+                                        setSelectedFileNames(
+                                            "Click to select images"
+                                        );
                                     }}
                                 >
                                     Clear images
@@ -349,7 +351,16 @@ const CreateProduct = () => {
                                     name=""
                                     id=""
                                     value={variant}
-                                    onChange={(e) => setVariant(e.target.value)}
+                                    onChange={(e) => {
+                                        setVariant(e.target.value);
+                                        if (e.target.value === "multiple") {
+                                            setDisableColorInput(false);
+                                        }
+                                        setColors([]);
+                                        setSelectedFileNames(
+                                            "Click to select images"
+                                        );
+                                    }}
                                     className="w-full h-8 rounded outline-none border border-gray-300 text-xs focus:border-green-300 focus:border transition-all duration-500"
                                 >
                                     <option value="single">Single</option>
