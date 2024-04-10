@@ -85,7 +85,7 @@ const EditProduct = () => {
                     <div className="w-full h-max flex flex-col gap-1">
                         <p className="text-sm font-medium">Color</p>
                         <div className="w-full h-max flex items-center gap-4">
-                            <div className="w-max h-max flex gap-2">
+                            <div className="w-max phone:w-full h-max flex phone:flex-wrap gap-2">
                                 <span
                                     className="min-w-20 h-max px-2 text-white text-xs py-1 bg-red-500 rounded-sm flex items-center justify-around cursor-pointer"
                                     onClick={() => setDeleteColor(true)}

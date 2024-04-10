@@ -151,8 +151,8 @@ const CreateProduct = () => {
         <>
             <p className="text-lg font-semibold">Create a product</p>
             <div className="w-full h-max flex flex-col gap-4">
-                <div className="w-full h-max flex gap-4 justify-between">
-                    <div className="w-[70%] h-max flex flex-col gap-2">
+                <div className="w-full h-max flex phone:flex-col gap-4 justify-between">
+                    <div className="w-[70%] phone:w-full h-max flex flex-col gap-2">
                         <div className="w-full h-max flex flex-col gap-1">
                             <p className="text-sm font-medium">Product Name</p>
                             <input
@@ -280,7 +280,7 @@ const CreateProduct = () => {
                             )}
                         </div>
                     </div>
-                    <div className="w-[30%] h-max flex flex-col gap-2">
+                    <div className="w-[30%] phone:w-full h-max flex flex-col gap-2">
                         <p className="text-sm">Organize</p>
                         <div className="w-full h-max flex flex-col gap-2 bg-white rounded-md p-2">
                             <div className="w-full h-max flex flex-col">
@@ -411,8 +411,8 @@ const CreateProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full h-max flex gap-4 justify-between">
-                    <div className="w-[70%] h-max flex flex-col gap-2">
+                <div className="w-full h-max flex phone:flex-col gap-4 justify-between">
+                    <div className="w-[70%] phone:w-full h-max flex flex-col gap-2">
                         <div className="w-full h-max flex flex-col gap-1">
                             <p className="text-sm font-medium">
                                 Full Product Description
@@ -468,7 +468,7 @@ const CreateProduct = () => {
                             )}
                         </div>
                     </div>
-                    <div className="w-[30%] h-max flex flex-col gap-2">
+                    <div className="w-[30%] phone:w-full h-max flex flex-col gap-2">
                         <p className="text-sm">Others</p>
                         <div className="w-full h-max flex flex-col gap-2 bg-white rounded-md p-2">
                             <div className="w-full h-max flex flex-col">
