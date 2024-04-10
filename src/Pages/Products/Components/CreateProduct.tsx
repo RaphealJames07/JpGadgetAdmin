@@ -1,4 +1,6 @@
+import {Modal} from "antd";
 import React, {useState} from "react";
+import Preview from "./Preview";
 
 const CreateProduct = () => {
     const [selectedFileNames, setSelectedFileNames] = useState<string>(
@@ -12,6 +14,7 @@ const CreateProduct = () => {
     const [imageData, setImageData] = useState<{[key: string]: File[]}>({});
     // console.log("Image_data:", imageData);
     const [disableColorInput, setDisableColorInput] = useState<boolean>(false);
+    const [openPreview, setOpenPreview] = useState<boolean>(false);
 
     const handleFileChange = (
         e: React.ChangeEvent<HTMLInputElement>,
@@ -496,10 +499,43 @@ const CreateProduct = () => {
                                     className="w-full h-8 rounded outline-none border border-gray-300 text-xs pl-2 focus:border-green-300 focus:border transition-all duration-500"
                                 />
                             </div>
+                            <div className="w-full h-max flex flex-col">
+                                <p className="text-xs font-medium">Weight</p>
+                                <input
+                                    type="number"
+                                    placeholder="Enter weight"
+                                    className="w-full h-8 rounded outline-none border border-gray-300 text-xs pl-2 focus:border-green-300 focus:border transition-all duration-500"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div className="w-full h-12 flex items-center justify-center gap-4">
+                    <button className="w-max h-max px-4 py-2 rounded font-semibold text-xs text-white bg-red-500">
+                        Cancel
+                    </button>
+                    <button
+                        className="w-max h-max px-4 py-2 rounded font-semibold text-xs text-white bg-yellow-500"
+                        onClick={() => setOpenPreview(true)}
+                    >
+                        Preview
+                    </button>
+                    <button className="w-max h-max px-4 py-2 rounded font-semibold text-xs text-white bg-green-500">
+                        Create
+                    </button>
+                </div>
             </div>
+            <Modal
+                open={openPreview}
+                closeIcon={true}
+                onCancel={() => setOpenPreview(false)}
+                // title="Product Details"
+                cancelButtonProps={{hidden: true}}
+                okButtonProps={{hidden: true}}
+                width={"80%"}
+            >
+                <Preview />
+            </Modal>
         </>
     );
 };

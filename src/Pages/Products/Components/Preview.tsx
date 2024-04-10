@@ -1,18 +1,15 @@
 import {FaMoneyBillAlt, FaRegStar, FaStar} from "react-icons/fa";
-import {MdEdit} from "react-icons/md";
+// import {MdEdit} from "react-icons/md";
 import {PiWaveTriangleFill} from "react-icons/pi";
 
 import {IoIosListBox, IoMdCash} from "react-icons/io";
 import {useState} from "react";
-import {Modal} from "antd";
-import EditProduct from "./EditProduct";
 
-const ViewProduct = () => {
+const Preview = () => {
     const [showSpec, setShowSpec] = useState<boolean>(true);
     const [showDetails, setShowDetails] = useState<boolean>(false);
     const [showReview, setShowReview] = useState<boolean>(false);
     const revData = [1, 2, 3, 4, 5];
-    const [openEdit, setOpenEdit] = useState<boolean>(false);
 
     const handleShowSpec = () => {
         setShowSpec(true);
@@ -35,15 +32,7 @@ const ViewProduct = () => {
             <div className="w-full h-max min-h-full  flex flex-col gap-2 text-gray-600 bg-[#f2f6f9] px-3 pt-1 pb-5">
                 <div className="w-full h-10 flex justify-between items-center">
                     <p className="font-medium">PRODUCT DETAILS</p>
-                    <div
-                        className="w-max h-max flex items-center justify-center text-xs gap-2 cursor-pointer bg-white px-2 rounded-sm"
-                        onClick={() => setOpenEdit(true)}
-                    >
-                        <span className="w-6 h-6 bg-[#fff] flex items-center justify-center rounded cursor-pointer">
-                            <MdEdit />
-                        </span>
-                        Edit
-                    </div>
+                    
                 </div>
                 <div className="w-full h-max flex phone:flex-col p-2 bg-white rounded border gap-5 border-gray-300 shadow-sm">
                     <div className="w-80 phone:w-full h-max flex flex-col gap-2">
@@ -422,18 +411,8 @@ const ViewProduct = () => {
                     </div>
                 </div>
             </div>
-            <Modal
-                open={openEdit}
-                closeIcon={true}
-                onCancel={() => setOpenEdit(false)}
-                // title="Product Details"
-                cancelButtonProps={{hidden: true}}
-                okButtonProps={{hidden: true}}
-            >
-                <EditProduct />
-            </Modal>
         </>
     );
 };
 
-export default ViewProduct;
+export default Preview;
