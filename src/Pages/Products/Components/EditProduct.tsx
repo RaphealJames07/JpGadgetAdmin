@@ -21,6 +21,14 @@ const EditProduct = () => {
                         />
                     </div>
                     <div className="w-full h-max flex flex-col gap-1">
+                        <p className="text-sm font-medium">Model</p>
+                        <input
+                            type="text"
+                            className="w-full h-8 rounded border border-gray-300 transition-all duration-500 shadow-sm focus:shadow-green-200 outline-none text-xs pl-2 disabled:cursor-not-allowed"
+                            disabled={editMode}
+                        />
+                    </div>
+                    <div className="w-full h-max flex flex-col gap-1">
                         <p className="text-sm font-medium">Category</p>
                         <select
                             name=""
@@ -60,6 +68,14 @@ const EditProduct = () => {
                     </div>
                     <div className="w-full h-max flex flex-col gap-1">
                         <p className="text-sm font-medium">Stock</p>
+                        <input
+                            type="number"
+                            className="w-full h-8 rounded border border-gray-300 transition-all duration-500 shadow-sm focus:shadow-green-200 outline-none text-xs pl-2 disabled:cursor-not-allowed"
+                            disabled={editMode}
+                        />
+                    </div>
+                    <div className="w-full h-max flex flex-col gap-1">
+                        <p className="text-sm font-medium">Weight</p>
                         <input
                             type="number"
                             className="w-full h-8 rounded border border-gray-300 transition-all duration-500 shadow-sm focus:shadow-green-200 outline-none text-xs pl-2 disabled:cursor-not-allowed"
@@ -120,12 +136,30 @@ const EditProduct = () => {
                     </div>
                     <div className="w-full h-max flex flex-col gap-1">
                         <p className="text-sm font-medium">Features</p>
-                        <textarea
-                            name=""
-                            id=""
-                            disabled={editMode}
-                            className="w-full h-28 border border-gray-300 transition-all duration-500 shadow-sm focus:shadow-green-200 outline-none text-xs pl-2 pt-2` disabled:cursor-not-allowed"
-                        ></textarea>
+                        <div className="w-full h-max flex flex-col gap-2">
+                            <div className="w-full h-max flex gap-4">
+                                <input
+                                    type="text"
+                                    className="w-1/2 h-8 rounded border border-gray-300 transition-all duration-500 shadow-sm focus:shadow-green-200 outline-none text-xs pl-2 disabled:cursor-not-allowed"
+                                    disabled={editMode}
+                                />
+                                <button
+                                    className="w-max h-8 px-4 bg-green-500 rounded font-semibold text-xs text-white disabled:cursor-not-allowed disabled:bg-green-300"
+                                    disabled={editMode}
+                                >
+                                    Add
+                                </button>
+                            </div>
+                            <div className="w-full h-max ">
+                                <ul className="w-full h-max font-medium text-xs list-disc pl-4">
+                                    <li>Feature 1</li>
+                                    <li>Feature 1</li>
+                                    <li>Feature 1</li>
+                                    <li>Feature 1</li>
+                                    <li>Feature 1</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
