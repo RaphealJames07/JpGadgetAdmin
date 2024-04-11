@@ -15,6 +15,8 @@ import EditProduct from "./Pages/Products/Components/EditProduct";
 import CreateProduct from "./Pages/Products/Components/CreateProduct";
 import ProductContent from "./Pages/Products/Components/ProductContent";
 import Text from "./Text";
+import UsersList from "./Pages/Users.tsx/Components/UsersList";
+import UserProfile from "./Pages/Users.tsx/Components/UserProfile";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -69,6 +71,16 @@ const App = () => {
                 {
                     path: "users",
                     element: <Users />,
+                    children: [
+                        {
+                            path: "",
+                            element: <UsersList />,
+                        },
+                        {
+                            path: "profile/:id",
+                            element: <UserProfile />,
+                        },
+                    ],
                 },
                 {
                     path: "reports",
