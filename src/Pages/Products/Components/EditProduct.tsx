@@ -3,9 +3,11 @@ import {useState} from "react";
 import {TbLetterX} from "react-icons/tb";
 
 const EditProduct = () => {
-    const [editMode, setEditMode] = useState<boolean>(true);
+    const [editMode] = useState<boolean>(true);
     const [deleteColor, setDeleteColor] = useState<boolean>(false);
     const [addColor, setAddColor] = useState<boolean>(false);
+
+    
 
     return (
         <>

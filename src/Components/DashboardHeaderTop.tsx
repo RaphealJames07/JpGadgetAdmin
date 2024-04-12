@@ -7,7 +7,7 @@ const DashboardHeaderTop = () => {
         // const [dateRange, setDateRange] = useState([null, null]);
         const [startDate, setStartDate] = useState();
         const [endDate, setEndDate] = useState();
-        const onChange = (dates) => {
+        const onChange = (dates:any) => {
             const [start, end] = dates;
             setStartDate(start);
             setEndDate(end);
