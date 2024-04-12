@@ -1,4 +1,6 @@
 import {MdOutlineEdit} from "react-icons/md";
+import UserOrders from "./UserOrders";
+import UserWishList from "./UserWishList";
 
 const UserProfile = () => {
     return (
@@ -43,11 +45,11 @@ const UserProfile = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="w-[45%] h-full bg-white rounded-md border border-gray-300 shadow-sm">
-                        <p className="text-">Default Address</p>
-                        <p>
+                    <div className="w-[45%] h-full bg-white rounded-md border border-gray-300 shadow-sm flex flex-col p-4 justify-between">
+                        <p className="text-lg font-semibold">Default Address</p>
+                        <p className="w-[80%] h-max font-semibold text-sm flex flex-col">
                             Address{" "}
-                            <span>
+                            <span className="font-normal text-xs">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Voluptatum quasi sequi dolor
                                 quis unde sint, quibusdam quam odit delectus
@@ -56,8 +58,18 @@ const UserProfile = () => {
                                 asperiores!
                             </span>
                         </p>
+                        <p className="w-[80%] h-max font-semibold text-sm flex flex-col">
+                            Email
+                            <span className="font-normal text-xs">raphealjunior07@gmail.com</span>
+                        </p>
+                        <p className="w-[80%] h-max font-semibold text-sm flex flex-col">
+                            Phone
+                            <span className="font-normal text-xs">08123456789</span>
+                        </p>
                     </div>
                 </div>
+                <UserOrders/>
+                <UserWishList/>
             </div>
         </>
     );
