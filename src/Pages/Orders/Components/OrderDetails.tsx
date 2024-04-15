@@ -10,11 +10,13 @@ import {BsBoxFill, BsShieldFillCheck} from "react-icons/bs";
 import Truck from "../../../assets/truckdelivery.gif";
 import {MdCancelPresentation, MdLocationPin} from "react-icons/md";
 import {useState} from "react";
+import {useNavigate} from "react-router";
 
 const OrderDetails = () => {
     const [showOrder, setShowOrder] = useState(false);
     const [showTransit, setShowTransit] = useState(false);
     const [showDelivered, setShowDelivered] = useState(false);
+    const nav = useNavigate();
 
     const handleShowOrder = () => {
         setShowOrder(!showOrder);
@@ -29,13 +31,21 @@ const OrderDetails = () => {
         <>
             <div className="w-full h-max flex flex-col gap-2">
                 <div className="w-full h-max flex flex-col gap-2">
-                    <p className="flex gap-2 text-lg font-semibold">
-                        Order: #ABC-123-DEF{" "}
-                        <div className="w-max h-max px-2 py-1 bg-yellow-500 text-yellow-700 rounded text-xs">
-                            pending
+                    <p className="flex justify-between gap-2 text-lg font-semibold">
+                        <div>
+                            Order: #ABC-123-DEF{" "}
+                            <div className="w-max h-max px-2 py-1 bg-yellow-500 text-yellow-700 rounded text-xs">
+                                pending
+                            </div>
                         </div>
+                        <button
+                            className="w-max h-8 rounded bg-yellow-500 text-yellow-700 text-xs px-2 font-semibold"
+                            onClick={() => nav("/admin/orders")}
+                        >
+                            Back To Orders
+                        </button>
                     </p>
-                  
+
                     <div className="w-full h-max phone:flex-col  flex justify-between">
                         <div className="w-[73%] phone:w-full h-full flex flex-col gap-7 ">
                             <div className="w-full h-max bg-white rounded-md">

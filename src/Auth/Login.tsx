@@ -27,7 +27,7 @@ const Login = () => {
                         className="textlg font-semibold w-full h-12 rounded text-white bg-sky-400"
                         onClick={() => navigate("/admin/dashboard")}
                     >
-                        LOGIN
+                        JUST CLICK TO LOGIN NO SECURITY YET
                     </button>
 
                     <p className="cursor-pointer">Forget your password?</p>
