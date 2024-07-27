@@ -12,7 +12,7 @@ const CreateProduct = () => {
     const [colorValue, setColorValue] = useState<string>("");
     const [variant, setVariant] = useState<string>("single");
     const [imageData, setImageData] = useState<{[key: string]: File[]}>({});
-    // console.log("Image_data:", imageData);
+    console.log("Image_data:", imageData);
     const [disableColorInput, setDisableColorInput] = useState<boolean>(false);
     const [openPreview, setOpenPreview] = useState<boolean>(false);
 
