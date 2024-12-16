@@ -24,6 +24,36 @@ const ChartOne = () => {
             chart: {
                 width: "auto",
                 type: "bar",
+                toolbar: {
+                    show: true,
+                    offsetX: 0,
+                    offsetY: 0,
+                    tools: {
+                        download: true,
+                        selection: true,
+                        zoom: true,
+                        zoomin: true,
+                        zoomout: true,
+                        pan: true,
+
+                        customIcons: [],
+                    },
+                    export: {
+                        csv: {
+                            filename: undefined,
+                            columnDelimiter: ",",
+                            headerCategory: "category",
+                            headerValue: "value",
+                        },
+                        svg: {
+                            filename: undefined,
+                        },
+                        png: {
+                            filename: undefined,
+                        },
+                    },
+                    autoSelected: "zoom",
+                },
             },
             plotOptions: {
                 bar: {

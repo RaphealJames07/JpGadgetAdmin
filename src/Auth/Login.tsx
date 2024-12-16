@@ -4,8 +4,8 @@ const Login = () => {
     const navigate = useNavigate();
     return (
         <>
-            <div className="w-full h-screen bg-sky-200 flex items-center justify-center">
-                <div className="w-[25%] h-max bg-white flex flex-col items-center justify-center gap-6 p-8 rounded-lg border border-gray-300">
+            <div className="w-full h-screen bg-sky-200 flex items-center justify-center phone:px-2">
+                <div className="w-[25%] phone:w-full h-max bg-white flex flex-col items-center justify-center gap-6 p-8 rounded-lg border border-gray-300">
                     <p className="text-2xl">Welcome Admin</p>
                     <div className="w-full h-max flex flex-col gap-2">
                         <p className="text-lg">Email</p>
